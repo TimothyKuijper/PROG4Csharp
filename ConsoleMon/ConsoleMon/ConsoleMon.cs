@@ -15,6 +15,7 @@ namespace ConsoleMon
         internal int energy;
         internal string name;
         private List<Skill> skills;
+        internal Element element;
 
 
         internal void TakeDamage(int damage)
