@@ -7,15 +7,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleMon
 {
-
-
     internal class ConsoleMon
     {
-        internal int health;
-        internal int energy;
-        internal string name;
-        private List<Skill> skills;
-        internal Element element;
+        public ConsoleMon() { }
+
+        internal ConsoleMon(int health, int energy, string name, Element weakness) {
+            this.name = name;
+            this.health = health;
+            this.energy = energy;
+            this.weakness = weakness;
+        }
+
+        public int health { get; set; }
+        public int energy { get; set; }
+        public string name { get; set; }
+        public Element weakness { get; set; }
+        public List<Skill> skills { get; set; }
+        public Element element { get; set; }
 
 
         internal void TakeDamage(int damage)
